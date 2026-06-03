@@ -1,0 +1,109 @@
+{
+    "acutator_list": [
+        {
+            "ethercat_slave_id": 1,
+            "boardcast": true,
+            "can_id_list": [
+                {
+                    "can_id": 1,
+                    "joint_name": "Left_Shoulder_Pitch_Joint",
+                    "port": 1,
+                    "type": "lens",
+                    "model": "lens_8680_16"
+                },
+                {
+                    "can_id": 2,
+                    "joint_name": "Left_Shoulder_Roll_Joint",
+                    "port": 1,
+                    "type": "lens",
+                    "model": "lens_8680_16"
+                },
+                {
+                    "can_id": 3,
+                    "joint_name": "Left_Shoulder_Yaw_Joint",
+                    "port": 1,
+                    "type": "lens",
+                    "model": "lens_4310_36"
+                },
+                {
+                    "can_id": 4,
+                    "joint_name": "Left_Elbow_Pitch_Joint",
+                    "port": 1,
+                    "type": "lens",
+                    "model": "lens_4310_36"
+                },
+                {
+                    "can_id": 5,
+                    "joint_name": "Left_Wrist_Yaw_Joint",
+                    "port": 1,
+                    "type": "lens",
+                    "model": "lens_4310_36"
+                },
+                {
+                    "can_id": 6,
+                    "joint_name": "Left_Wrist_Roll_Joint",
+                    "port": 1,
+                    "type": "lens",
+                    "model": "lens_4310_36"
+                },
+                {
+                    "can_id": 7,
+                    "joint_name": "Left_Wrist_Pitch_Joint",
+                    "port": 1,
+                    "type": "lens",
+                    "model": "lens_4310_36"
+                },
+                {
+                    "can_id": 1,
+                    "joint_name": "Right_Shoulder_Pitch_Joint",
+                    "port": 2,
+                    "type": "lens",
+                    "model": "lens_8680_16"
+                },
+                {
+                    "can_id": 2,
+                    "joint_name": "Right_Shoulder_Roll_Joint",
+                    "port": 2,
+                    "type": "lens",
+                    "model": "lens_8680_16"
+                },
+                {
+                    "can_id": 3,
+                    "joint_name": "Right_Shoulder_Yaw_Joint",
+                    "port": 2,
+                    "type": "lens",
+                    "model": "lens_4310_36"
+                },
+                {
+                    "can_id": 4,
+                    "joint_name": "Right_Elbow_Pitch_Joint",
+                    "port": 2,
+                    "type": "lens",
+                    "model": "lens_4310_36"
+                },
+                {
+                    "can_id": 5,
+                    "joint_name": "Right_Wrist_Yaw_Joint",
+                    "port": 2,
+                    "type": "lens",
+                    "model": "lens_4310_36"
+                },
+                {
+                    "can_id": 6,
+                    "joint_name": "Right_Wrist_Roll_Joint",
+                    "port": 2,
+                    "type": "lens",
+                    "model": "lens_4310_36"
+                },
+                {
+                    "can_id": 7,
+                    "joint_name": "Right_Wrist_Pitch_Joint",
+                    "port": 2,
+                    "type": "lens",
+                    "model": "lens_4310_36"
+                }
+
+            ]
+        }
+    ]
+}

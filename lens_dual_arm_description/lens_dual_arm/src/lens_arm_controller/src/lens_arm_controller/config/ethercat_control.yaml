@@ -1,0 +1,30 @@
+/**:
+  ros__parameters:
+    # 打开后，joint_controller_node 将直接通过 actuator_SDK 下发 setTargetMit(batch)
+    use_ethercat_control: true
+    ethercat_ifname: "eth1"
+    actuator_config_file: "/root/Project/lens_dual_arm_description_cpp/lens_dual_arm_description/actuator_SDK_ARM/actuator_config.json"
+    actuator_params_file: "/root/Project/lens_dual_arm_description_cpp/lens_dual_arm_description/actuator_SDK_ARM/actuator_params_config.json"
+    ethercat_send_frequency: 500
+    # EtherCAT OP 后等待 CAN 总线稳定，再 disable/setMode/enable
+    motor_init_post_ec_delay_ms: 2000
+    motor_init_retry_count: 5
+    motor_init_retry_delay_ms: 400
+    # MIT 控制参数（position 来自动作轨迹，vel/tor 固定值）
+    mit_kp: 10.0
+    mit_kd: 1.0
+    mit_vel: 0.0
+    mit_torque: 0.0
+    # 订阅 Python / 仿真侧发布的外部 JointState 轨迹（默认 /joint_command）
+    accept_external_joint_command: true
+    external_joint_command_topic: "/joint_command"
+    external_command_idle_timeout_s: 2.0
+    # 超时后持续下发上一帧关节目标，保持臂不动（不再回到 IDLE 停发）
+    hold_last_command_on_idle: true
+    external_hold_publish_hz: 50.0
+    # 从 EtherCAT 反馈读取关节角并发布到 /joint_states（弧度）
+    joint_feedback_hz: 50.0
+    # 拒绝超出 URDF 限位的 /joint_command（不下发 EtherCAT）
+    enforce_joint_position_limits: true
+    # 左臂 sign 标定：肩 pitch、肘 pitch、腕三轴（与 MuJoCo 混用会导致法兰姿态错）
+    invert_joint_names: "Left_Shoulder_Pitch_Joint,Left_Elbow_Pitch_Joint,Left_Wrist_Yaw_Joint,Left_Wrist_Roll_Joint,Left_Wrist_Pitch_Joint"

@@ -1,0 +1,44 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.venv_win/
+.tooling_venv/
+*.egg-info/
+
+# ROS / CMake build outputs
+build/
+install/
+log/
+logs/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+colcon.log
+
+# Generated/distribution bundles
+dist/
+*.tar.gz
+*.zip
+*.7z
+*.rar
+*.sha256
+*_MANIFEST.md
+
+# Runtime/editor artifacts
+*.log
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# MuJoCo/runtime noise
+MUJOCO_LOG.TXT
+
+# Nested repository metadata/backups from copied workspaces
+**/.git/
+**/.git_backup_before_root_upload/

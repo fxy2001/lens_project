@@ -1,0 +1,11 @@
+# Goal
+string command
+string parameters
+---
+# Result
+bool success
+string message
+---
+# Feedback
+int32 progress  # 0-100%
+string status

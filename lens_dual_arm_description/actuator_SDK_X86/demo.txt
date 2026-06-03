@@ -1,0 +1,28 @@
+void setActuatorController()
+{
+  std::string package_path = ament_index_cpp::get_package_share_directory("rl_controller");
+  std::string motor_config_file = package_path + "/third_party/actuator_controller_x86/actuator_config.json";
+  std::string actuator_params_file = package_path + "/third_party/actuator_controller_x86/actuator_params_config.json";
+  auto yaml_path = package_path + "/config/rl_config.yaml";
+  YAML::Node config;
+  config = YAML::LoadFile(yaml_path);
+  auto ethercat_device = config["rl_controller_node"]["ethercat_device"].as<std::string>();
+  LOG_INFO("ethercat_device: {}", ethercat_device);
+  ActuatorController::loadActuatorParamsConfig(actuator_params_file);
+  actuator_controller_ = std::make_shared<ActuatorController>();
+  if(actuator_controller_->initCanIdAndEthercatRelation(ethercat_device,motor_config_file,500) == false) 
+  {
+    LOG_ERROR("Failed to initialize ActuatorController");
+    return;
+  }
+
+  std::vector<MotorModeEnum> modes;
+  for (size_t i = 0; i < _NUM_LEG_DOF_; i++)
+  {
+    modes.push_back(MotorModeEnum::MODE_MIT);
+  }
+
+  actuator_controller_->setMotorMode(leg_joint_names, modes);
+  actuator_controller_->enableMotor(leg_joint_names);
+  actuator_controller_->setLogLevel(3);
+}

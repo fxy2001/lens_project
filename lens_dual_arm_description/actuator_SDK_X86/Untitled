@@ -1,0 +1,18 @@
+sudo pkill -f joint_controller_node 2>/dev/null || true
+sudo pkill -f joint_controller_executable 2>/dev/null || true
+
+cd /home/ylgy/lens_ec_ws
+sudo -E bash -lc '
+export ROS_DOMAIN_ID=0
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+source /opt/ros/jazzy/setup.bash
+source /home/ylgy/lens_ec_ws/install/setup.bash
+export LD_LIBRARY_PATH=/home/ylgy/桌面/lens_dual_arm_description/lens_dual_arm/third_party_runtime_libs:$LD_LIBRARY_PATH
+export ROS_LOG_DIR=/tmp/ros_log; mkdir -p /tmp/ros_log
+
+ros2 run joint_controller_node joint_controller_executable \
+  --ros-args \
+  --params-file /home/ylgy/lens_ec_ws/install/joint_controller_node/share/joint_controller_node/config/ethercat_control.yaml \
+  -p ethercat_ifname:=enp12s0 \
+  -p invert_joint_names:=Left_Elbow_Pitch_Joint
+'

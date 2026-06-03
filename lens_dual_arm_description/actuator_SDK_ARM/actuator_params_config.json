@@ -1,0 +1,120 @@
+{
+    "actuator_params": {
+        "damiao": {
+            "default": {
+                "pos_lower": -12.5,
+                "pos_upper": 12.5,
+                "vel_lower": -45.0,
+                "vel_upper": 45.0,
+                "kp_range": 500.0,
+                "kd_range": 5.0,
+                "tor_lower": -18.0,
+                "tor_upper": 18.0
+            },
+            "DM_J4310": {
+                "pos_lower": -12.5,
+                "pos_upper": 12.5,
+                "vel_lower": -50.0,
+                "vel_upper": 50.0,
+                "kp_range": 500.0,
+                "kd_range": 5.0,
+                "tor_lower": -10.0,
+                "tor_upper": 10.0
+            },
+            "DM_J4340": {
+                "pos_lower": -12.5,
+                "pos_upper": 12.5,
+                "vel_lower": -20.0,
+                "vel_upper": 20.0,
+                "kp_range": 500.0,
+                "kd_range": 5.0,
+                "tor_lower": -28.0,
+                "tor_upper": 28.0
+            }
+        },
+        "lens": {
+            "default": {
+                "pos_lower": -10,
+                "pos_upper": 10,
+                "vel_lower": -10.0,
+                "vel_upper": 10.0,
+                "kp_range": 1000.0,
+                "kd_range": 500.0,
+                "tor_lower": -36.0,
+                "tor_upper": 36.0
+            }
+        },
+        "encos": {
+            "EC_A4310_P2_36": {
+                "pos_lower": -12.5,
+                "pos_upper": 12.5,
+                "vel_lower": -18.0,
+                "vel_upper": 18.0,
+                "kp_range": 500.0,
+                "kd_range": 5.0,
+                "tor_lower": -30.0,
+                "tor_upper": 30.0
+            },
+            "EC_A6408_P2_25": {
+                "pos_lower": -12.5,
+                "pos_upper": 12.5,
+                "vel_lower": -18.0,
+                "vel_upper": 18.0,
+                "kp_range": 500.0,
+                "kd_range": 5.0,
+                "tor_lower": -60.0,
+                "tor_upper": 60.0
+            },
+            "EC_A8112_P1_18": {
+                "pos_lower": -12.5,
+                "pos_upper": 12.5,
+                "vel_lower": -18.0,
+                "vel_upper": 18.0,
+                "kp_range": 500.0,
+                "kd_range": 5.0,
+                "tor_lower": -90.0,
+                "tor_upper": 90.0
+            },
+            "EC_A10020_P1_12_6": {
+                "pos_lower": -12.5,
+                "pos_upper": 12.5,
+                "vel_lower": -18.0,
+                "vel_upper": 18.0,
+                "kp_range": 500.0,
+                "kd_range": 50.0,
+                "tor_lower": -150.0,
+                "tor_upper": 150.0
+            },
+            "EC_A10020_P2_24": {
+                "pos_lower": -12.5,
+                "pos_upper": 12.5,
+                "vel_lower": -18.0,
+                "vel_upper": 18.0,
+                "kp_range": 500.0,
+                "kd_range": 50.0,
+                "tor_lower": -300.0,
+                "tor_upper": 300.0
+            },
+            "EC_A13720_P1_11_4": {
+                "pos_lower": -12.5,
+                "pos_upper": 12.5,
+                "vel_lower": -18.0,
+                "vel_upper": 18.0,
+                "kp_range": 500.0,
+                "kd_range": 50.0,
+                "tor_lower": -400.0,
+                "tor_upper": 400.0
+            },
+            "EC_A13715_P1_12_67": {
+                "pos_lower": -12.5,
+                "pos_upper": 12.5,
+                "vel_lower": -18.0,
+                "vel_upper": 18.0,
+                "kp_range": 500.0,
+                "kd_range": 50.0,
+                "tor_lower": -320.0,
+                "tor_upper": 320.0
+            }
+        }
+    }
+}

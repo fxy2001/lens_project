@@ -1,0 +1,5 @@
+source install/setup.bash
+ros2 service call /motion_controller/execute_motion robot_interface/srv/MotionExecute "{motion_id: 'return_zero', motion_name: ''}"
+ros2 service call /motion_controller/execute_motion robot_interface/srv/MotionExecute "{motion_id: 'guojia', motion_name: ''}"
+ros2 service call /motion_controller/execute_motion robot_interface/srv/MotionExecute "{motion_id: 'stop', motion_name: ''}"
+

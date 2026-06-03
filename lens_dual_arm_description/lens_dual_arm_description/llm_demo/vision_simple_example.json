@@ -1,0 +1,7 @@
+{
+  "command_id": "grab_001",
+  "arm": "right",
+  "target": [0.48, -0.24, 0.42],
+  "duration_s": 4.0,
+  "action": "grasp"
+}

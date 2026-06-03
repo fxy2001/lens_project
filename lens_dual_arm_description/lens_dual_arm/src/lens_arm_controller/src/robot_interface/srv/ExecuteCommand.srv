@@ -1,0 +1,6 @@
+string command
+string parameters  # JSON格式参数
+---
+bool success
+string message
+string result

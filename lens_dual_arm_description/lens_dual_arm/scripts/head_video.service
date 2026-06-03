@@ -1,0 +1,15 @@
+[Unit]
+Description=Robot Service
+After=network.service
+
+[Service]
+Type=simple
+User=robot
+EnvironmentFile=/home/robot/ti5robot_ws/scripts/EnvironmentFile
+WorkingDirectory=/home/robot/ti5robot_ws
+ExecStart=/home/robot/ti5robot_ws/scripts/head_video.sh
+Restart=no
+KillSignal=2
+
+[Install]
+WantedBy=multi-user.target

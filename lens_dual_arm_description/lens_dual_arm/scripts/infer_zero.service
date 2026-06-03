@@ -1,0 +1,14 @@
+[Unit]
+Description=Robot Service
+After=network.service
+
+[Service]
+Type=simple
+EnvironmentFile=/home/lens/lens_dual_arm/scripts/EnvironmentFile
+WorkingDirectory=/home/lens/lens_dual_arm
+ExecStart=/home/lens/lens_dual_arm/scripts/infer_zero.sh
+Restart=no
+KillSignal=2
+
+[Install]
+WantedBy=multi-user.target

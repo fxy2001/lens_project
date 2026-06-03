@@ -1,0 +1,28 @@
+# Git / 本地环境
+**/.git
+**/.gitignore
+**/.venv
+**/__pycache__
+**/*.py[cod]
+*$py.class
+.tooling_venv
+
+# 主机上 colcon 产物（镜像内会重新编译）
+lens_dual_arm/build
+lens_dual_arm/install
+lens_dual_arm/log
+
+# 仿真目录下本地 venv
+lens_dual_arm_description/.venv
+
+# 体积大、与本镜像核心链（仿真 + joint_controller + SDK）无直接依赖
+# 若需要打进镜像，删除下面几行后重新 build
+grpc
+unitree_sdk2_python
+lens_ros
+
+# 编辑器与临时文件
+**/.vscode
+**/.idea
+**/*~
+**/.DS_Store
